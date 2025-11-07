@@ -1,8 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:midorisour_playground_flutter/routes/on_generate_custom_route.dart';
 
 void main() {
+  // Use clean URLs on web (no # hash)
+  usePathUrlStrategy();
   runApp(const MyApp());
 }
 
