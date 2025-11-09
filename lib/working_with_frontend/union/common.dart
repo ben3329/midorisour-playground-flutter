@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:midorisour_playground_flutter/working_with_frontend/widgets/header.dart';
+import 'package:midorisour_playground_flutter/working_with_frontend/widgets/response_card.dart';
 import 'package:openapi/openapi.dart';
 import 'package:dio/dio.dart';
 
-import '../widgets/widgets.dart';
-
-class UnusualUnionPage extends StatefulWidget {
-  const UnusualUnionPage({super.key});
+class CommonUnionPage extends StatefulWidget {
+  const CommonUnionPage({super.key});
 
   @override
-  State<UnusualUnionPage> createState() => _UnusualUnionPageState();
+  State<CommonUnionPage> createState() => _CommonUnionPageState();
 }
 
-class _UnusualUnionPageState extends State<UnusualUnionPage> {
+class _CommonUnionPageState extends State<CommonUnionPage> {
   final Openapi _client = Openapi();
   late final WorkingWithFrontendApi api;
-  final String title = 'Unusual Response(Flutter)';
+  final String title = 'Common Response(Flutter)';
 
   @override
   void initState() {
@@ -44,7 +44,7 @@ class _UnusualUnionPageState extends State<UnusualUnionPage> {
                   ResponseCard(
                     title: title,
                     playFunction: api
-                        .getUnusualResponseWorkingWithFrontendUnionUnusualResponseGet,
+                        .getCommonResponseWorkingWithFrontendUnionCommonResponseGet,
                   ),
                 ],
               ),
